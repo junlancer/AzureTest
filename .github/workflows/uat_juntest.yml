@@ -72,7 +72,7 @@ jobs:
               --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
               --service-name juntest-apim \
               --api-id weatherforecast \
-              --path /weatherforecast \
+              --path /api \
               --specification-format OpenApi \
               --specification-url https://juntest-fze7f2f7czfacmcq.koreasouth-01.azurewebsites.net/swagger/v1/swagger.json \
               --display-name "WeatherForecast API" \
