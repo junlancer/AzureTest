@@ -74,7 +74,7 @@ jobs:
               --api-id weatherforecast \
               --path /weatherforecast \
               --specification-format OpenApi \
-              --specification-url https://juntest-fze7f2f7czfacmcq.koreasouth-01.azurewebsites.net/openapi/v1.json \
+              --specification-url https://juntest-fze7f2f7czfacmcq.koreasouth-01.azurewebsites.net/swagger/v1/swagger.json \
               --display-name "WeatherForecast API" \
               --protocols https
           
