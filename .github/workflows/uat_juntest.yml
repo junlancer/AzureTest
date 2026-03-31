@@ -62,4 +62,19 @@ jobs:
           app-name: 'juntest'
           slot-name: 'Production'
           package: .
+
+      - name: Import API to APIM
+        uses: azure/cli@v2
+        with:
+          azcliversion: latest
+          inlineScript: |
+            az apim api import \
+              --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
+              --service-name juntest-apim \
+              --api-id weatherforecast \
+              --path /weatherforecast \
+              --specification-format OpenApi \
+              --specification-url https://juntest.azurewebsites.net/openapi/v1.json \
+              --display-name "WeatherForecast API" \
+              --protocols https
           
